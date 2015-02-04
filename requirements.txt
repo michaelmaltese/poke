@@ -1,0 +1,8 @@
+-e vendor/PIL_shim
+
+chaco==4.5.0
+Cython==0.21.2
+ipython==2.4.0
+numpy==1.9.1
+Pillow==2.7.0
+watchdog==0.8.2
