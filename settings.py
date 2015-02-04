@@ -8,12 +8,12 @@ DB_COMPRESSION_SLEEP = .1
 
 OBSERVER_SLEEP = .2
 
-LOGFILE_RECEIVER = '/tmp/poke-receiver.log'
-LOGFILE_OBSERVER = '/tmp/poke-observer.log'
-LOGFILE_UI = '/tmp/poke-ui.log'
-LOGFILE_DB = '/tmp/poke-db.log'
+LOGFILE_RECEIVER = 'poke-receiver.log'
+LOGFILE_OBSERVER = 'poke-observer.log'
+LOGFILE_UI = 'poke-ui.log'
+LOGFILE_DB = 'poke-db.log'
 
-DATABASE = "/tmp/pokestore.sqlite"
+DATABASE = "pokestore.sqlite"
 
 CHURCH_INPUT_FILE = "./input.church"
 

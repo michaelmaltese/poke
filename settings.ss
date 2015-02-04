@@ -12,7 +12,7 @@
  (import (rnrs))
 
  (define CHURCH-HEADER-FILE
-   "/Users/andreas/code/bher/scheme-compilers/header-vicare.sc")
+   "vendor/bher/scheme-compilers/header-vicare.sc")
 
  (define CHURCH-TRAILER
    '( (randomize-rng)
