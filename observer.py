@@ -4,21 +4,24 @@
 Restarts church-loop.ss whenever the monitored Church file changes.
 """
 
+import sys
+sys.path.append('vendor/python-tools')
 from pytools import run_async
 from pytools.async import AsyncThread
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 import logging
+import os
 import os.path
 import settings
 import time
-import sys
 
 logger = logging.getLogger('poke-observer')
 logger.addHandler(logging.FileHandler(settings.LOGFILE_OBSERVER))
 logger.addHandler(logging.StreamHandler(sys.stdout))
 logger.setLevel(logging.INFO)
 
+os.environ['VICARE_LIBRARY_PATH'] = '.:vendor/bher:vendor/scheme-tools:' + os.environ.get('VICARE_LIBRARY_PATH', '')
 
 def file_nonempty(filename):
     s = open(filename).read()
