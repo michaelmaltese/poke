@@ -1,4 +1,4 @@
-all: vendor/bher vendor/scheme-tools
+all: vendor/bher vendor/scheme-tools vendor/python-tools
 
 vendor/bher:
 	mkdir -p vendor
@@ -11,3 +11,9 @@ vendor/scheme-tools:
 	rm -frv vendor/scheme-tools-tmp
 	git clone https://github.com/stuhlmueller/scheme-tools vendor/scheme-tools-tmp
 	mv vendor/scheme-tools-tmp vendor/scheme-tools
+
+vendor/python-tools:
+	mkdir -p vendor
+	rm -frv vendor/python-tools-tmp
+	git clone https://github.com/stuhlmueller/python-tools vendor/python-tools-tmp
+	mv vendor/python-tools-tmp vendor/python-tools
