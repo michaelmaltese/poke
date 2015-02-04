@@ -9,6 +9,7 @@ from pytools.async import AsyncThread
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 import logging
+import os.path
 import settings
 import time
 import sys
@@ -77,7 +78,7 @@ class ModifiedEventHandler(FileSystemEventHandler):
 def start_observer():
     event_handler = ModifiedEventHandler()
     observer = Observer()
-    observer.schedule(event_handler, path=settings.CHURCH_INPUT_FILE, recursive=False)
+    observer.schedule(event_handler, path=os.path.dirname(settings.CHURCH_INPUT_FILE), recursive=False)
     observer.start()
     logger.info("observer started.")
     try:
