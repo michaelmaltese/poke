@@ -5,11 +5,11 @@ Visualizes continuously changing histogram data.
 """
 
 from barchart import BarChart
-from enthought.chaco.api import *
-from enthought.enable.component_editor import ComponentEditor
-from enthought.pyface.timer.api import Timer
-from enthought.traits.api import *
-from enthought.traits.ui.api import *
+from chaco.api import *
+from enable.component_editor import ComponentEditor
+from pyface.timer.api import Timer
+from traits.api import *
+from traitsui.api import *
 from hashable import make_hashable
 import IPython
 import db

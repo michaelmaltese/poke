@@ -4,11 +4,11 @@
 Implements a continuously updateable barchart for the traits UI.
 """
 
-from enthought.chaco.api import *
-from enthought.enable.component_editor import ComponentEditor
-from enthought.pyface.timer.api import Timer
-from enthought.traits.api import *
-from enthought.traits.ui.api import *
+from chaco.api import *
+from enable.component_editor import ComponentEditor
+from pyface.timer.api import Timer
+from traits.api import *
+from traitsui.api import *
 import logging
 import numpy as np
 import settings
